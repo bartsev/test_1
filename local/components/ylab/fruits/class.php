@@ -4,15 +4,15 @@ use \Bitrix\Iblock\ElementTable;
 
 class FruitsComponent extends CBitrixComponent
 {
-	private function getFruits()
-	{
-		$dbResult = ElementTable::getList(
-			Array(
-				'select'=>Array('ID', 'NAME'),
-				'filter'=>Array('IBLOCK_ID'=>$this->arParams['IBLOCK_ID'])
-			));
+    private function getFruits()
+    {
+        $dbResult = ElementTable::getList(
+            Array(
+                'select'=>Array('ID', 'NAME'),
+                'filter'=>Array('IBLOCK_ID'=>$this->arParams['IBLOCK_ID'])
+            ));
 
-		return $dbResult->fetchAll();
+        return $dbResult->fetchAll();
 
     }
 
